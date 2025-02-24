@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload with Shareable Link</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="heading-container">
+        <img src="images/logo1.png" alt="logo" />
+      </div>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <div class="container">
+          <h1>Upload a File and Share It</h1>
+
+          <div class="file-upload">
+            <input type="file" id="fileInput" />
+          </div>
+
+          <div class="password-section">
+            <label for="password">Set Password (optional):</label>
+            <input type="password" id="password" placeholder="Enter password" />
+          </div>
+
+          <div class="expiry-section">
+            <label for="expiry">Set Expiry (optional, in days):</label>
+            <input
+              type="number"
+              id="expiry"
+              placeholder="Enter number of days"
+            />
+          </div>
+
+          <!-- Shareable link section -->
+          <div id="linkSection" class="link-section" style="display: none">
+            <p>Shareable Link:</p>
+            <input type="text" id="shareableLink" readonly />
+            <p id="expiryMessage"></p>
+          </div>
+
+          <button onclick="uploadFile()">Upload</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <img src="images/logo1.png" alt="logo" />
+        <p>&copy; 2025 Softmaji Infotech.All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+
+  <script src="script.js"></script>
+</html>
